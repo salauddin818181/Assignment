@@ -1,0 +1,250 @@
+(1) Swap to number using temporary variable
+
+import java.util.Scanner;
+public class SwapNumberTemporary {
+	
+	public static void main(String[]arg) {
+	    double z;
+	    System.out.println("Enter first number");
+  	    Scanner sc =new Scanner (System.in);
+  	    double x = sc.nextDouble();
+   	    System.out.println("Enter second number");
+   	    Scanner sc1 =new Scanner (System.in);
+  	    double y = sc.nextDouble();
+   	  
+   	    z = x;
+   	    x = y;
+   	    y = z;
+
+   	  System.out.println("After swapping = "+x+" "+ y);
+      }
+
+}
+
+--------------------------------------------------------------
+
+(2) Swap to number without using temporary varible
+
+import java.util.Scanner;
+public class SwapNumberTemporary {
+	
+	public static void main(String[]arg) {
+	   
+	    System.out.println("Enter first number");
+  	    Scanner sc =new Scanner (System.in);
+  	    double x = sc.nextDouble();
+   	    System.out.println("Enter second number");
+   	    Scanner sc1 =new Scanner (System.in);
+  	    double y = sc.nextDouble();
+   	  
+   	          x = x * y;
+	   	  y = x / y;
+	   	  x = x / y;
+   	  System.out.println("After swapping = "+x+" "+ y);
+      }
+
+}
+
+--------------------------------------------------------------
+
+(3) Check whether a number is even or odd using ternary operator
+
+import java.util.Scanner;
+public class OddEvenTurnary {
+	
+	public static void main(String[]arg) {
+	   
+	    System.out.println("Enter first number");
+  	    Scanner sc =new Scanner (System.in);
+  	    int a = sc.nextInt();
+   	  
+   	      String evenOdd = (a%2 == 0) ? "Even" : "Odd";
+		System.out.println(a+" is  "+evenOdd+" Number");
+      }
+
+}
+
+--------------------------------------------------------------
+
+(4) Check whether an alphabet is vowel or consonant using if--else
+
+import java.util.Scanner;
+
+public class CheckVowel {
+
+	public static void main(String[]arg) {
+		
+		char ch;
+		System.out.println("Enter a charector");
+		Scanner sc = new Scanner(System.in);
+		ch = sc.next().charAt(0);
+		if(ch =='a' || ch =='e' || ch =='i' || ch =='o' || ch =='u') {
+			System.out.println(ch+" is a vowel");
+		}
+			else {
+				System.err.println(ch+" is a consonant");
+			}
+	  }
+}
+
+--------------------------------------------------------------
+
+(5) Check whether an alphabet is vowel or consonant using switch statment
+
+import java.util.Scanner;
+
+public class VowelConsonant {
+	
+public static void main(String[]arg) {
+		boolean isVowel = false;
+		char ch;
+		System.out.println("Enter a character");
+		Scanner sc = new Scanner(System.in);
+		ch = sc.next().charAt(0);
+		
+		switch(ch){
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+		case 'A':
+		case 'E':
+		case 'I':
+		case 'O':
+		case 'U': isVowel = true;
+		
+		}	
+		if(isVowel == true) {
+			System.out.println(ch+" is a Vowel");
+		}
+		else {
+		  if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+		  System.out.println(ch+ " is a Consonant");
+		else
+		  System.out.println("input is an alphabet");
+	}
+    }
+}
+
+--------------------------------------------------------------
+
+(6) Find largest number among three number using if--else statement
+
+import java.util.Scanner;
+
+public class LargestNumber {
+
+	public static void main(String[]arg) {
+		
+	System.out.println("Enter first number");
+  	    Scanner sc =new Scanner (System.in);
+  	    double a = sc.nextDouble();
+   	    System.out.println("Enter second number");
+   	     Scanner sc1 =new Scanner (System.in);
+  	    double b = sc.nextDouble();
+  	    System.out.println("Enter therd number");
+   	     Scanner sc2 =new Scanner (System.in);
+  	    double c = sc2.nextDouble();
+  	    
+  	    if(a>=b && a>=c) {
+			System.out.println(a+" is largest");
+		}
+		else if(b>=a && b>=c) {
+			System.out.println(b+" is largest");
+		}
+		else {
+			System.out.println(c+" is largest");
+		}
+  	    
+	  }
+}
+
+--------------------------------------------------------------
+
+(7) Find largest number among three number using nested if--else statement
+
+import java.util.Scanner;
+
+public class LargestNumber {
+
+	public static void main(String[]arg) {
+		
+	System.out.println("Enter first number");
+  	    Scanner sc =new Scanner (System.in);
+  	    double a = sc.nextDouble();
+   	    System.out.println("Enter second number");
+   	     Scanner sc1 =new Scanner (System.in);
+  	    double b = sc.nextDouble();
+  	    System.out.println("Enter therd number");
+   	     Scanner sc2 =new Scanner (System.in);
+  	    double c = sc2.nextDouble();
+  	    
+  	   if(a>=b) {
+			if(a>=c) {
+				System.out.println(a+" is a largest");
+			}
+			else {
+				System.out.println(c+" is a largest");
+			}
+		}
+			else {
+				if(b>=c) {
+					System.out.println(b+" is a largest");
+				}
+				else {
+					System.out.println(c+" is a largest");
+				}
+			}
+  	    
+	  }
+}
+
+--------------------------------------------------------------
+
+(8) Check if a number is positive or negative using if...else
+
+import java.util.Scanner;
+
+public class PositiveNegative {
+	public static void main(String[]arg) {
+		
+		int n;
+		System.out.println("Enter a number");
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		
+		if(n>0) {
+			System.out.println(n+" is +ve number");
+		}
+		else if(n<0) {
+			System.out.println(n+" is -ve number");
+		}
+		else {
+			System.out.println(n+" Niether +ve nor -ve Number");
+		}
+	}
+}
+
+-----------------------------------------------------------------------
+
+(9) Java program to check alphabetmusing if...else
+
+import java.util.Scanner;
+
+public class CheckAlphabet {
+	public static void main(String[]arg) {
+		
+		char c;
+		System.out.println("Enter a character");
+		Scanner sc = new Scanner(System.in);
+		c = sc.next().charAt(0);
+		
+		if((c>='a' && c<='z') || (c>='A' && c<='Z')) {
+			System.out.println(c+" is an alphabet");
+		}
+		else {
+			System.out.println(c+" is not an alphabet");
+		}
+	}
+}
