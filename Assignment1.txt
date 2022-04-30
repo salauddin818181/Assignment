@@ -1,0 +1,234 @@
+(11) Check alphabet using turnary
+
+import java.util.Scanner;
+public class Alphabet {
+
+    public static void main(String[] args) {
+        System.out.println("Enter a character");
+        Scanner sc=new Scanner(System.in);
+        char c = sc.next().charAt(0);
+        
+        String str = (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')? c + " is an alphabet.": c + " is not an alphabet.";
+        
+        System.out.println(str);
+    }
+}
+
+------------------------------------------------------------
+
+(12) Check alphabet using alphabetic method()
+
+import java.util.Scanner;
+class Alphabetic {
+  public static void main(String[] args) {
+
+    System.out.println("Enter a character");
+        Scanner sc=new Scanner(System.in);
+        char c = sc.next().charAt(0);
+        
+    if (Character.isAlphabetic(c)) {
+      System.out.println(c + " is an alphabet.");
+    }
+    else {
+      System.out.println(c + " is not an alphabet.");
+    }
+  }
+}
+
+------------------------------------------------------------
+
+(13) Sum of Natural Numbers using for loop
+
+
+import java.util.Scanner;
+public class SumNatural {
+
+    public static void main(String[] args) {
+        
+        System.out.println("Enter a Number");
+        Scanner sc=new Scanner(System.in);
+        int c = sc.nextInt();
+
+        int sum = 0;
+
+        for(int i = 1; i <= c; ++i)
+        {
+            
+            sum = sum + i;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+------------------------------------------------------------
+
+(14) Sum of Natural Numbers using while loop
+
+import java.util.Scanner;
+public class SumNatural {
+
+    public static void main(String[] args) {
+        int i = 1, sum = 0;
+        System.out.println("Enter a Number");
+        Scanner sc=new Scanner(System.in);
+        int c = sc.nextInt();
+
+
+        while(i <= c)
+        {
+            sum = sum + i;
+            i++;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+------------------------------------------------------------
+
+(15) Find the factorial using for loop
+
+import java.util.Scanner;
+public class Factorial {
+
+    public static void main(String[] args) {
+        
+        System.out.println("Enter a Number");
+        Scanner sc=new Scanner(System.in);
+        int c = sc.nextInt();
+
+        long fac = 1;
+        for(int i = 1; i <= c; ++i)
+        {
+            
+            fac = fac*i;
+        }
+        System.out.printf("Factorial of "+c+" is = "+fac);
+    }
+}
+
+------------------------------------------------------------
+
+(16)Find factorial using biginteger
+
+import java.math.BigInteger;
+import java.util.Scanner;
+public class Factorial {
+
+    public static void main(String[] args) {
+
+        System.out.println("Enter a Number");
+        Scanner sc=new Scanner(System.in);
+        int c = sc.nextInt();
+        
+        BigInteger d = BigInteger.ONE;
+        for(int i = 1; i <= c; ++i)
+        {
+        
+            d = d.multiply(BigInteger.valueOf(i));
+        }
+        System.out.printf("Factorial of "+c+" is = "+d);
+    }
+}
+
+------------------------------------------------------------
+
+(17) Find factorial using while loop
+
+import java.util.Scanner;
+public class Factorial {
+
+    public static void main(String[] args) {
+        int i = 1;
+        System.out.println("Enter a Number");
+        Scanner sc=new Scanner(System.in);
+        int c = sc.nextInt();
+        
+        long ft = 1;
+        while(i <= c)
+        {
+            ft = ft * i;
+            i++;
+        }
+        System.out.printf("Factorial of "+ c +" is = "+ ft);
+    }
+}
+
+
+------------------------------------------------------------
+
+(18) Multiplication table using for loop
+
+import java.util.Scanner;
+public class MultiplicationTable {
+
+    public static void main(String[] args) {
+
+        System.out.println("Enter a Number");
+        Scanner sc=new Scanner(System.in);
+        int c = sc.nextInt();
+        
+        for(int i = 1; i <= 10; ++i)
+        {
+            System.out.println(c+" * "+i+" = "+c*i);
+        }
+    }
+}
+
+------------------------------------------------------------
+
+(19) Multiplication using while loop
+
+import java.util.Scanner;
+public class MultiplicationTable {
+
+    public static void main(String[] args) {
+        int i = 1;
+        System.out.println("Enter a Number");
+        Scanner sc=new Scanner(System.in);
+        int c = sc.nextInt();
+        
+         while(i <= 10)
+        {
+            System.out.println(c+" * "+i+" = "+c*i);
+            i++;
+        }
+    }
+}
+
+------------------------------------------------------------
+
+(20) Display Fibonacci Series Using for Loop
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 0; int b = 1; int c;
+        System.out.print(a+" "+b);
+        
+        for(int i=2; i<=10; i++){
+            c = a+b;
+            System.out.print(" "+c);
+            a=b;
+            b=c;
+        }
+    }
+}
+
+------------------------------------------------------------
+
+(21) Display Fibonacci Series Using for Loop
+
+public class Fibonacci {
+    public static void main(String[] args) {
+       int i = 2; int a = 0, b = 1; int c;
+        System.out.print(a+" "+b);
+        while(i<=10){
+            c = a+b;
+            System.out.print(" "+c);
+            a=b;
+            b=c;
+            i++;
+        }
+    }
+}
