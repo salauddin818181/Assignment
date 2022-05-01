@@ -1,0 +1,259 @@
+(23) Find GCD of two numbers using for loop and if statement
+
+import java.util.Scanner;
+
+public class GcdNumber {
+  public static void main(String[] args) {
+
+        System.out.println("Enter First Number");
+        Scanner sc=new Scanner(System.in);
+        int c1 = sc.nextInt();
+        System.out.println("Enter Second  Number");
+        Scanner sc1=new Scanner(System.in);
+        int c2 = sc1.nextInt();
+    
+        int gcd = 1;
+
+        for (int i = 1; i <= c1 && i <= c2; ++i) {
+
+        if (c1 % i == 0 && c2 % i == 0)
+        gcd = i;
+      }
+      System.out.println("GCD of " + c1 +" and " + c2 + " is " + gcd);
+  }
+}
+
+-------------------------------------------------------------------------
+
+(24)  Find GCD of two numbers using while loop and if else statement
+
+import java.util.Scanner;
+
+public class GcdNumber {
+  public static void main(String[] args) {
+
+        System.out.println("Enter First Number");
+        Scanner sc=new Scanner(System.in);
+        int c1 = sc.nextInt();
+        System.out.println("Enter Second  Number");
+        Scanner sc1=new Scanner(System.in);
+        int c2 = sc1.nextInt();
+    
+        while(c1 != c2) {
+    
+          if(c1 > c2) {
+            c1 = c1 - c2;
+         }
+         else {
+             c2 = c2 - c1;
+        }
+     }
+     System.out.println("GCD: " + c1);
+  }
+}
+
+-------------------------------------------------------------------------
+
+(25)  GCD for both positive and negative numbers
+
+import java.util.Scanner;
+
+public class GcdNumber {
+  public static void main(String[] args) {
+
+        System.out.println("Enter First Number");
+        Scanner sc=new Scanner(System.in);
+        int c1 = sc.nextInt();
+        System.out.println("Enter Second  Number");
+        Scanner sc1=new Scanner(System.in);
+        int c2 = sc1.nextInt();
+    
+        c1 = ( c1 > 0) ? c1 : -c1;
+        c2 = ( c2 > 0) ? c2 : -c2;
+
+        while(c1 != c2) {
+        
+         if(c1 > c2) {
+           c1 =c1 - c2;
+         }
+         else {
+           c2 =c2 - c1;
+         }
+       }
+       System.out.println("GCD: " + c1);
+  }
+}
+
+-------------------------------------------------------------------------
+
+(26) LCM using while Loop and if Statement
+
+import java.util.Scanner;
+
+public class GcdNumber {
+  public static void main(String[] args) {
+        
+        int lcm;
+        System.out.println("Enter First Number");
+        Scanner sc=new Scanner(System.in);
+        int c1 = sc.nextInt();
+        System.out.println("Enter Second  Number");
+        Scanner sc1=new Scanner(System.in);
+        int c2 = sc1.nextInt();
+    
+        lcm = (c1 > c2) ? c1 : c2;
+        
+        while(true) {
+        if( lcm % c1 == 0 && lcm % c2 == 0 ) {
+        System.out.printf("The LCM of %d and %d is %d.", c1, c2, lcm);
+        break;
+      }
+      ++lcm;
+    }
+  }
+}
+
+-------------------------------------------------------------------------
+
+(27) Calculate LCM using GCD
+
+import java.util.Scanner;
+
+public class GcdNumber {
+  public static void main(String[] args) {
+        
+        int gcd = 1;
+        System.out.println("Enter First Number");
+        Scanner sc=new Scanner(System.in);
+        int c1 = sc.nextInt();
+        System.out.println("Enter Second  Number");
+        Scanner sc1=new Scanner(System.in);
+        int c2 = sc1.nextInt();
+    
+         for(int i = 1; i <= c1 && i <= c2; ++i) {
+            if(c1 % i == 0 && c2 % i == 0)
+            gcd = i;
+         }
+         int lcm = (c1 * c2) / gcd;
+         System.out.printf("The LCM of %d and %d is %d.", c1, c2, lcm);
+     }
+}
+
+-------------------------------------------------------------------------
+
+(28) Display uppercase alphabet using for loop
+
+class UpperCase {
+    public static void main(String[] args) {
+
+    char c;
+
+    for(c = 'A'; c <= 'Z'; ++c){
+    System.out.print(c + " ");
+    }
+  }
+}
+
+-------------------------------------------------------------------------
+
+(29)  Display lowercase alphabet using for loop
+
+class Main {
+  public static void main(String[] args) {
+
+    char c;
+
+    for(c = 'a'; c <= 'z'; ++c){
+      System.out.print(c + " ");
+    }
+  }
+}
+
+-------------------------------------------------------------------------
+
+(30) Count number of digits in an integer using while loop
+
+import java.util.Scanner;
+public class CountNumber {
+  public static void main(String[] args) {
+      
+    int count = 0;
+    System.out.println("Enter a number");
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+
+    while (num != 0) {
+      num = num/10;
+      ++count;
+    }
+    System.out.println("Number of digits: " + count);
+  }
+}
+
+-------------------------------------------------------------------------
+
+(31) Count number of digits in an integer using for loop
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+
+    int count = 0;
+    System.out.println("Enter a number");
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+
+    for (; num != 0; num /= 10, ++count) {
+    }
+
+    System.out.println("Number of digits: " + count);
+  }
+}
+
+-------------------------------------------------------------------------
+
+(32) Reverse a number using a while loop in java
+
+import java.util.Scanner;
+
+class ReverseNumber {
+  public static void main(String[] args) {
+
+    int rev = 0;
+    System.out.println("Enter a number");
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    
+    while(num != 0) {
+
+    int digit = num % 10;
+    rev = rev * 10 + digit;
+    num = num / 10;
+    }
+    System.out.println("Reversed Number: " + rev);
+  }
+}
+
+-------------------------------------------------------------------------
+
+(33) Reverse a number using a for loop in java
+
+import java.util.Scanner;
+
+class ReverseNumber {
+  public static void main(String[] args) {
+
+    int rev = 0;
+    System.out.println("Enter a number");
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    
+    for(;num != 0; num /= 10) {
+      int digit = num % 10;
+      rev = rev * 10 + digit;
+    }
+
+    System.out.println("Reversed Number: " + rev);
+  }
+}
